@@ -6,16 +6,15 @@ module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
     colors: {
-      custom1: "#78dcca",
-      customBlack: {
-        blacklight: "#272727",
-        blacklightdark: "#1C1C1C",
-        blackdark: "#202020",
-      },
-      customGreen: {
-        greenlight: "#6BAE8A",
-      },
-      white: colors.white,
+      'blue': '#1fb6ff',
+      'purple': '#7e5bef',
+      'pink': '#ff49db',
+      'orange': '#ff7849',
+      'green': '#13ce66',
+      'yellow': '#ffc82c',
+      'gray-dark': '#273444',
+      'gray': '#8492a6',
+      'gray-light': '#d3dce6',
     },
     extend: {},
   },
