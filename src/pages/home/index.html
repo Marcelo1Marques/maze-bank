@@ -7,24 +7,35 @@
     <link href="../../assets/css/output.css" rel="stylesheet" />
     <title>Maze Bank</title>
   </head>
-  <body class="overflow-x-hidden bg-blue text-sm md:text-lg lg:text-xl">
+  <body class="overflow-x-hidden bg-blue text-base md:text-lg lg:text-xl">
     <header class="h-auto w-screen pt-3">
-      <h1 class="flex justify-center">Welcome to the Bank</h1>
-      <h2 class="flex justify-center">You will be able to withdraw and/or deposit any amount you wish</h2>
+      <h1 class="flex justify-center">Welcome to the Bank App!</h1>
     </header>
     <div>
-      <div>
-        <section class="flex items-center flex-col gap-2">
+      <div class="w-56">
+        <section class="flex items-center flex-col gap-2 border-double border-4 border-sky-500">
           <h1>Deposit</h1>
-          <h2>Current Balance</h2>
-          <button id="button" type="btn" class="cursor-pointer">Send</button>
+          <h2>
+            <input type="number" id="" placeholder="Deposit amount" min="5" max="1000">
+          </h2>
+          <button id="button" type="button" class="cursor-pointer bg-black text-white h-12 w-20">Send</button>
+          <h1>New Balance</h1>
+          <h2>
+            <span id="balance">00€</span>
+          </h2>
         </section>
       </div>
-      <div>
-        <section class="flex items-center flex-col gap-2">
+      <div class="w-56">
+        <section class="flex items-center flex-col gap-2 border-double border-4 border-sky-500">
           <h1>Withdraw</h1>
-          <h2>New Balance</h2>
-          <button id="button" type="btn" class="cursor-pointer">Take</button>
+          <h2>
+            <input type="number" id="" placeholder="Withdraw amount" min="5" max="1000">
+          </h2>
+          <button id="button" type="button" class="cursor-pointer bg-black text-white h-12 w-20">Take</button>
+          <h1>New Balance</h1>
+          <h2>
+            <span id="balance">00€</span>
+          </h2>
         </section>
       </div>
     </div>
