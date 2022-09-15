@@ -7,13 +7,43 @@
     <link href="../../assets/css/output.css" rel="stylesheet" />
     <title>Maze Bank</title>
   </head>
-  <body class="overflow-x-hidden bg-blue text-base md:text-lg lg:text-xl">
+  <body class="overflow-x-hidden bg-gray text-base md:text-lg lg:text-xl mt-6">
     <header class="h-auto w-screen pt-3">
       <h1 class="flex justify-center">Welcome to the Bank App!</h1>
     </header>
-    <div>
-      <div class="w-56">
-        <section class="flex items-center flex-col gap-2 border-double border-4 border-sky-500">
+    <div class="flex justify-center gap-16 pt-16">
+      <div class="bg-green flex flex-col justify-center items-center border-2 w-32">
+        <h5>Deposit</h5>
+          <h2><span id="deposit">00.00</span>€</h2>
+      </div>
+      <div class="bg-green flex flex-col justify-center items-center border-2 w-32">
+        <h5>Withdraw</h5>
+          <h2><span id="withdraw">00.00</span>€</h2>
+      </div>
+    </div>
+    <div class="flex justify-center pt-16">
+      <div class="bg-green flex flex-col justify-center items-center border-2 w-32">
+        <h5>Balance</h5>
+          <h2><span id="balance">500.00</span>€</h2>
+      </div>
+    </div>
+    <div class="pt-20">
+      <div class="flex flex-col items-center gap-2">
+        <h4>Deposit Amount</h4>
+          <input type="number" class="w-48" placeholder="Enter deposit amount">
+          <button id="deposit_btn" class="">Deposit</button>
+      </div>
+      <div class="flex flex-col items-center gap-2 pt-10">
+        <h4>Withdraw Amount</h4>
+          <input type="number" class="w-48" placeholder="Enter withdraw amount">
+          <button id="withdraw_btn" class="">Withdraw</button>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+        <!-- <section class="flex items-center flex-col gap-2 border-double border-4 border-sky-500">
           <h1>Deposit</h1>
           <h2>
             <input type="number" id="" placeholder="Deposit amount" min="5" max="1000">
@@ -38,6 +68,4 @@
           </h2>
         </section>
       </div>
-    </div>
-  </body>
-</html>
+    </div> -->
