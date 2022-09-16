@@ -20,7 +20,6 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         { from: "./src/assets/fonts/", to: "assets/fonts/" },
-        { from: "./src/assets/img/", to: "assets/img/" },
       ],
     }),
   ],

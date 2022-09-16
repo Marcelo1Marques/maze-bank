@@ -7,65 +7,54 @@
     <link href="../../assets/css/output.css" rel="stylesheet" />
     <title>Maze Bank</title>
   </head>
-  <body class="overflow-x-hidden bg-pink text-base md:text-lg lg:text-xl mt-6">
+  <body class="overflow-x-hidden bg-pink md:text-xl lg:text-3xl mt-6">
     <header class="h-auto w-screen pt-3">
-      <h1 class="flex justify-center">Welcome to the Bank App!</h1>
+      <h1 class="flex justify-center bolded"><b>Welcome to the Bank App!</b></h1>
     </header>
-    <div class="flex justify-center gap-16 pt-16">
-      <div class="bg-green flex flex-col justify-center items-center border-none border-2 w-32">
-        <h2>Deposit</h2>
+    <form action="" class="flex flex-col items-center pt-20 gap-1">
+      <label for="">
+        <span title="Full Name">Name</span> 
+      </label>
+      <input type="text" class="w-52 md:w-72 lg:w-96">
+      <label for="">
+        <span>Phone Number</span>
+      </label>
+      <input type="number" class="w-52 md:w-72 lg:w-96">
+      <label for="">
+        <span>Email</span>
+      </label>
+      <input type="email" class="w-52 md:w-72 lg:w-96">
+      <button class="bg-gray w-24 md:w-32 text-white rounded-full">Send</button>
+  </form>
+    <div class="flex flex-col items-center pt-6"> 
+      <div class="bg-green flex flex-col items-center border-none border-2 rounded-lg w-40 md:w-60">
+        <h2><b>Deposit</b></h2>
           <h2><span id="deposit">00.00</span>€</h2>
       </div>
-      <div class="bg-red flex flex-col justify-center items-center border-none border-2 w-32">
-        <h2>Withdraw</h2>
-          <h2><span id="withdraw">00.00</span>€</h2>
-      </div>
     </div>
-    <div class="flex justify-center pt-16">
-      <div class="bg-blue flex flex-col justify-center items-center border-none border-2 w-32">
-        <h2>Balance</h2>
+    <div class="flex flex-col items-center pt-6">
+        <div class="bg-red flex flex-col items-center border-none border-2 rounded-lg w-40 md:w-60">
+          <h2><b>Withdraw</b></h2>
+            <h2><span id="withdraw">00.00</span>€</h2>
+        </div>
+    </div>
+    <div class="flex justify-center pt-6">
+      <div class="bg-blue flex flex-col items-center border-none border-2 rounded-lg w-40 md:w-60">
+        <h2><b>Balance</b></h2>
           <h2><span id="balance">500.00</span>€</h2>
       </div>
     </div>
-    <div class="pt-20">
+    <div class="pt-6">
       <div class="flex flex-col items-center gap-2">
         <h4>Deposit Amount:</h4>
-          <input type="number" class="w-48 text-center" placeholder="Enter deposit amount">
-          <button type="button" id="deposit_btn" class="bg-gray w-24 text-white rounded-full">Deposit</button>
-        </div>
-      <div class="flex flex-col items-center gap-2 pt-10">
+          <input type="number" class="w-52 text-center md:w-72 lg:w-96" placeholder="Enter deposit amount">
+          <button type="button" id="deposit_btn" class="bg-gray w-24 md:w-32 text-white rounded-full">Deposit</button>
+      </div>
+      <div class="flex flex-col items-center gap-2 pt-10 pb-10">
         <h4>Withdraw Amount:</h4>
-          <input type="number" class="w-48 text-center" placeholder="Enter withdraw amount">
-          <button type="button" id="withdraw_btn" class="bg-gray w-24 text-white rounded-full">Withdraw</button>
-        </div>
+          <input type="number" class="w-52 text-center md:w-72 lg:w-96" placeholder="Enter withdraw amount">
+          <button type="button" id="withdraw_btn" class="bg-gray w-24 md:w-32 text-white rounded-full">Withdraw</button>
+      </div>
     </div>
   </body>
 </html>
-
-
-        <!-- <section class="flex items-center flex-col gap-2 border-double border-4 border-sky-500">
-          <h1>Deposit</h1>
-          <h2>
-            <input type="number" id="" placeholder="Deposit amount" min="5" max="1000">
-          </h2>
-          <button id="button" type="button" class="cursor-pointer bg-black text-white h-12 w-20">Send</button>
-          <h1>New Balance</h1>
-          <h2>
-            <span id="balance">00€</span>
-          </h2>
-        </section>
-      </div>
-      <div class="w-56">
-        <section class="flex items-center flex-col gap-2 border-double border-4 border-sky-500">
-          <h1>Withdraw</h1>
-          <h2>
-            <input type="number" id="" placeholder="Withdraw amount" min="5" max="1000">
-          </h2>
-          <button id="button" type="button" class="cursor-pointer bg-black text-white h-12 w-20">Take</button>
-          <h1>New Balance</h1>
-          <h2>
-            <span id="balance">00€</span>
-          </h2>
-        </section>
-      </div>
-    </div> -->
