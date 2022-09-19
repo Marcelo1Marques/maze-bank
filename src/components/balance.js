@@ -1,6 +1,5 @@
-const deposit_btn = document.getElementById("deposit_button")
-const withdraw_btn = document.getElementById("withdraw_button")
-const withdraw = document.getElementById("withdraw");
-const deposit = document.getElementById("deposit")
+import depositBtn from "./deposit"
+import withdrawBtn from "./withdraw"
+
 const balance = document.getElementById("balance")
 
