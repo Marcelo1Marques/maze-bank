@@ -29,30 +29,30 @@
     <div class="flex flex-col items-center pt-6"> 
       <div class="bg-green flex flex-col items-center border-none border-2 rounded-lg w-40 md:w-60">
         <h2><b>Deposit</b></h2>
-          <h2><span id="deposit">00.00</span>€</h2>
+          <h2><span id="deposit-total">00.00</span>€</h2>
       </div>
     </div>
     <div class="flex flex-col items-center pt-6">
         <div class="bg-red flex flex-col items-center border-none border-2 rounded-lg w-40 md:w-60">
           <h2><b>Withdraw</b></h2>
-            <h2><span id="withdraw">00.00</span>€</h2>
+            <h2><span id="withdraw-total">00.00</span>€</h2>
         </div>
     </div>
     <div class="flex justify-center pt-6">
       <div class="bg-blue flex flex-col items-center border-none border-2 rounded-lg w-40 md:w-60">
         <h2><b>Balance</b></h2>
-          <h2><span id="balance">500.00</span>€</h2>
+          <h2><span id="balance-total"></span>€</h2>
       </div>
     </div>
     <div class="pt-6">
       <div class="flex flex-col items-center gap-2">
         <h4>Deposit Amount:</h4>
-          <input id="deposit-amount" type="number" class="w-52 text-center md:w-72 lg:w-96" placeholder="Enter deposit amount">
+          <input id="deposit-amount" type="number" min="1" class="w-52 text-center md:w-72 lg:w-96" placeholder="Enter deposit amount">
           <button type="button" id="depositBtn" class="bg-gray w-24 md:w-32 lg:w-48 text-white rounded-full">Deposit</button>
       </div>
       <div class="flex flex-col items-center gap-2 pt-10 pb-10">
         <h4>Withdraw Amount:</h4>
-          <input id="withdraw-amount" type="number" class="w-52 text-center md:w-72 lg:w-96" placeholder="Enter withdraw amount">
+          <input id="withdraw-amount" type="number" min="1" class="w-52 text-center md:w-72 lg:w-96" placeholder="Enter withdraw amount">
           <button type="button" id="withdrawBtn" class="bg-gray w-24 md:w-32 lg:w-48 text-white rounded-full">Withdraw</button>
       </div>
     </div>

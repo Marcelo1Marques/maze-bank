@@ -1,12 +1,17 @@
-const depositBtn = document.getElementById("deposit-button")
+const depositBtn = document.getElementById("deposit-button");
 
-depositBtn.addEventListener("click", function() {
-    const depositString = getNumber("deposit-amount");
+//Amount Deposited
+depositBtn.addEventListener("click", () => {
+    const depositAmount = document.getElementById("deposit-amount");
+    const newDepositAmountText =  depositAmount.value;
+    const newDepositAmount = parseFloat(newDepositAmountText);
+    //Update current Amount
+    const depositTotal = document.getElementById("deposit-total")
+    const previousDepositText = depositTotal.innerText;
+    const previousDepositAmount = parseFloat(previousDepositText);
+    const newDepositTotal =  previousDepositAmount + newDepositAmount
 
-    updateSpan("deposit", depositString);
-    updateSpan("balance", depositString);
-
-    document.getElementById("deposit-amount").value = "";
+    depositTotal.innerText = newDepositTotal
 });
 
 export default depositBtn
