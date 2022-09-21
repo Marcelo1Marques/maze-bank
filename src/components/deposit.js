@@ -1,17 +1,24 @@
 const depositBtn = document.getElementById("deposit-button");
 
-//Amount Deposited
 depositBtn.addEventListener("click", () => {
-    const depositAmount = document.getElementById("deposit-amount");
-    const newDepositAmountText =  depositAmount.value;
-    const newDepositAmount = parseFloat(newDepositAmountText);
-    //Update current Amount
-    const depositTotal = document.getElementById("deposit-total")
-    const previousDepositText = depositTotal.innerText;
-    const previousDepositAmount = parseFloat(previousDepositText);
-    const newDepositTotal =  previousDepositAmount + newDepositAmount
+    if (isNaN(depositTotal.value)) {
+        alert("Please enter a number.");
+        return depositTotal.value = "";
+    } else {
+        if (depositTotal.value < 1 || depositTotal.value >10000) {
+            alert("Your total balance cannot drop bellow 0€");
+            return depositTotal.value = "";
+        } else {
+            deposits.push(Number(depositTotal.value));
+            balanceTotal -= (Number(depositTotal.value));
 
-    depositTotal.innerText = newDepositTotal
-});
+            let balanceTotal = formatter.format(balanceTotal);
+            document.getElementById("balanceTotal").innerHTML = balanceTotal;
+
+            console.log("€" + depositTotal.value);
+            return depositTotal.value = "";
+        }  
+    }
+})
 
 export default depositBtn
