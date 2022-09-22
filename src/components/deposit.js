@@ -8,23 +8,12 @@ const deposit = () => {
         let input = parseInt(depositInput.value);
         let result = balance + input;
         console.log(result);
-        // if (isNaN(depositTotal.value)) {
-        //     alert("Please enter a number.");
-        //     return depositTotal.value = "";
-        // } else {
-        //     if (depositTotal.value < 1 || depositTotal.value >10000) {
-        //         alert("Your total balance cannot drop bellow 0€");
-        //         return depositTotal.value = "";
-        //     } else {
-        //         deposits.push(Number(depositTotal.value));
-        //         balanceTotal -= (Number(depositTotal.value));
-
-        //         console.log("€" + depositTotal.value);
-        //         return depositTotal.value = "";
-        //     }  
-        // }
+        if (document.getElementById("deposit-amount").value.length == 0) {
+            alert("Enter the amount you would like to deposit!")
+            let balance = document.getElementById("balance").value;
+            document.getElementById("balance").innerHTML = balance - depositInput
+        }
     })
 }
-
 
 export default deposit;

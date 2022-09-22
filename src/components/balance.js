@@ -1,1 +1,4 @@
-export let balance = Number(0);
+export let balance = Number(100);
+
+
+console.log(balance);
