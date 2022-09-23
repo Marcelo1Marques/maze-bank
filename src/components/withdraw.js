@@ -1,5 +1,4 @@
 import { balance } from "./balance";
-import deposit from "./deposit";
 
 const withdrawInput = document.getElementById("withdraw-amount")
 const withdrawBtn = document.getElementById("withdraw-button");
