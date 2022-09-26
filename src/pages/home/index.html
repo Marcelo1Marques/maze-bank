@@ -7,57 +7,139 @@
     <link href="../../assets/css/output.css" rel="stylesheet"/>
     <title>Maze Bank</title>
   </head>
-  <body class="overflow-x-hidden bg-pink md:text-xl lg:text-3xl mt-6">
+  <body class="overflow-x-hidden max-h-fit bg-pink md:text-xl lg:text-3xl mt-6">
     <header class="h-auto w-screen pt-3">
-      <h1 class="flex justify-center bolded"><b>Welcome to the Bank App!</b></h1>
+      <h1 class="flex justify-center pb-10 text-lg"><b>Welcome to the Bank App!</b></h1>
     </header>
     <div class="flex justify-center">
       <button type="btn" id="form-btn" class="bg-gray w-24 md:w-32 lg:w-48 text-white rounded-full">Fill our Form</button>
     </div>
-    <form action="" class="flex flex-col items-center pt-20 gap-1 hidden">
-      <label for="">
+    <form action="" id="form" class="flex flex-col items-center pt-10 pb-10 gap-1 hidden">
+      <label>
         <span title="Full Name">Name</span> 
       </label>
       <input type="text" class="w-52 md:w-72 lg:w-96">
-      <label for="">
+      <label>
         <span>Phone Number</span>
       </label>
       <input type="number" class="w-52 md:w-72 lg:w-96">
-      <label for="">
+      <label>
         <span>Email</span>
       </label>
       <input type="email" class="w-52 md:w-72 lg:w-96">
-      <button class="bg-gray w-24 md:w-32 text-white rounded-full">Send</button>
-  </form>
-    <div class="flex flex-col items-center pt-6"> 
-      <div class="bg-green flex flex-col items-center border-none border-2 rounded-lg w-40 md:w-60">
-        <h2><b>Deposit</b></h2>
-          <h2><span id="deposit-total">00.00</span>€</h2>
+      <label>
+        <span>Balance</span>
+      </label>
+      <input type="number" class="w-52 md:w-72 lg:w-96">
+      <button class="bg-gray w-24 md:w-32 text-white rounded-full" id="send-btn">Send</button>
+      <div>
+        <div class="flex flex-col items-center pt-10"> 
+          <div class="bg-blue flex flex-col items-center border-none border-2 rounded-lg w-40 md:w-60">
+            <h2><b>Your name</b></h2>
+                <h2><span id="form-name"></span></h2>
+            </div>
+          </div>
+          <div class="flex flex-col items-center pt-6">
+              <div class="bg-blue flex flex-col items-center border-none border-2 rounded-lg w-40 md:w-60">
+                <h2><b>Your phone number</b></h2>
+                  <h2><span id="form-number"></span></h2>
+              </div>
+          </div>
+          <div class="flex justify-center pt-6">
+            <div class="bg-blue flex flex-col items-center border-none border-2 rounded-lg w-40 md:w-60">
+              <h2><b>Your email</b></h2>
+                <h2><span id="form-email"></span></h2>
+            </div>
+          </div>
+          <div class="flex justify-center pt-6">
+            <div class="bg-blue flex flex-col items-center border-none border-2 rounded-lg w-40 md:w-60">
+              <h2><b id="balance">Current balance</b></h2>
+                <h2><span id="form-balance"></span></h2>
+            </div>
+          </div>
+      </div>
+    </form>
+  <div class="flex flex-col items-center pt-64"> 
+    <div class="bg-green flex flex-col items-center border-none border-2 rounded-lg w-40 md:w-60">
+      <h2><b>Deposit</b></h2>
+          <h2><span id="deposit-total">0</span>€</h2>
       </div>
     </div>
     <div class="flex flex-col items-center pt-6">
         <div class="bg-red flex flex-col items-center border-none border-2 rounded-lg w-40 md:w-60">
           <h2><b>Withdraw</b></h2>
-            <h2><span id="withdraw-total">00.00</span>€</h2>
+            <h2><span id="withdraw-total">0</span>€</h2>
         </div>
     </div>
     <div class="flex justify-center pt-6">
       <div class="bg-blue flex flex-col items-center border-none border-2 rounded-lg w-40 md:w-60">
         <h2><b>Balance</b></h2>
-          <h2><span id="balance"></span>€</h2>
+          <h2><span id="balance">0</span>€</h2>
       </div>
     </div>
-    <div class="pt-6">
+    <div class="pt-10">
       <div class="flex flex-col items-center gap-2">
         <h4>Deposit Amount:</h4>
           <input id="deposit-amount" type="number" min="1" class="w-52 text-center md:w-72 lg:w-96" placeholder="Enter deposit amount">
           <button type="button" id="deposit-button" class="bg-gray w-24 md:w-32 lg:w-48 text-white rounded-full">Deposit</button>
       </div>
-      <div class="flex flex-col items-center gap-2 pt-10 pb-10">
+      <div class="flex flex-col items-center gap-2 pt-10 pb-28">
         <h4>Withdraw Amount:</h4>
           <input id="withdraw-amount" type="number" min="1" class="w-52 text-center md:w-72 lg:w-96" placeholder="Enter withdraw amount">
           <button type="button" id="withdraw-button" class="bg-gray w-24 md:w-32 lg:w-48 text-white rounded-full">Withdraw</button>
       </div>
     </div>
+    <div class="flex flex-col items-center gap-1 min-h-screen pt-20 gap-2">
+      <button type="btn" id="transfer-btn" class="bg-gray w-24 md:w-32 lg:w-48 text-white rounded-full">Transfers</button>
+      <form action="" id="transfer" class="flex flex-col items-center pt-10 pb-10 gap-1 hidden">
+        <label>
+          <span title="Full Name">Beneficiary Name</span> 
+        </label>
+        <input type="text" class="w-52 md:w-72 lg:w-96">
+        <label>
+          <span>RIB</span>
+        </label>
+        <input type="number" class="w-52 md:w-72 lg:w-96">
+        <label>
+          <span>Amount</span>
+        </label>
+        <input type="amount" class="w-52 md:w-72 lg:w-96">
+        <button class="bg-gray w-24 md:w-32 text-white rounded-full">Send</button>
+        <div class="flex flex-col items-center pt-10"> 
+          <div class="bg-blue flex flex-col items-center border-none border-2 rounded-lg w-40 md:w-60">
+            <h2><b>Beneficiary's name</b></h2>
+                <h2><span id="name-sent"></span></h2>
+            </div>
+          </div>
+          <div class="flex justify-center pt-6">
+            <div class="bg-blue flex flex-col items-center border-none border-2 rounded-lg w-40 md:w-60">
+              <h2><b>Amount sent</b></h2>
+                <h2><span id="money-sent"></span></h2>
+            </div>
+          </div>
+    </div>
+    <!-- <img src="../../assets/img/thank-you.jpg" alt=""> -->
+    <footer class=" bg-blue w-screen h-20 text-pink inset-x-0 bottom-0">
+      <div class="flex flex-col justify-center items-center h-full">
+        <span class="italic">Copyright</span>
+        <div>
+          <span>
+            <a href="https://github.com/Marcelo1Marques" target="_blank" rel="noreferrer noopener">
+              <i class="fa-brands fa-github text-pink"></i>
+            </a>
+          </span>
+          <span class="px-4">
+            <a href="https://www.linkedin.com/in/marcelo-marques-57297a22a/" target="_blank" rel="noreferrer noopener">
+              <i class="fa-brands fa-linkedin text-pink"></i>
+            </a>
+          </span>
+          <span >
+            <a href="https://marcelom-portfolio.netlify.app/" target="_blank" rel="noreferrer noopener">
+              <i class="fa-solid fa-link text-pink"></i>
+            </a>
+          </span>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

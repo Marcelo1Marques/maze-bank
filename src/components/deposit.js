@@ -2,18 +2,22 @@ import { balance } from "./balance";
 
 const depositInput = document.getElementById("deposit-amount");
 const depositBtn = document.getElementById("deposit-button");
+const resultDeposit = document.getElementById("balance");
+const deposited = document.getElementById("deposit-total")
 
-const deposit = () => {
+export const deposit = () => {
+    let newBalance = balance;
+    
     depositBtn.addEventListener("click", () => {
         let input = parseInt(depositInput.value);
-        let result = balance + input;
+        let result = newBalance += input;
         console.log(result);
-        if (document.getElementById("deposit-amount").value.length == 0) {
-            alert("Enter the amount you would like to deposit!")
-            let balance = document.getElementById("balance").value;
-            document.getElementById("balance").innerHTML = balance - depositInput
+
+        if (depositInput.value.length === 0) {
+            alert("Enter the amount you would like to deposit!");
+        } else {
+            resultDeposit.innerHTML =  (newBalance) + '€';
+            deposited.innerHTML = (input);
         }
     })
-}
-
-export default deposit;
+};

@@ -1,11 +1,10 @@
-export const formBtn = document.getElementById("form-btn");
+const formBtn = document.getElementById("form-btn");
 
-formBtn.addEventListener("click", () => {
-    const form = document.getElementById("form");
-    if (form.class.display === "hidden") {
-        form.class.display = "block";
-    }
-    else {
-        form.class.display = "hidden";
-    }
-});
+const form = () => {
+    formBtn.addEventListener("click", () => {
+        const form = document.getElementById("form");
+        form.classList.toggle("hidden")
+    });
+}
+
+export default form

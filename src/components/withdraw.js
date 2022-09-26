@@ -1,19 +1,23 @@
-import { balance } from "./balance";
+import {balance}  from "./balance";
 
 const withdrawInput = document.getElementById("withdraw-amount")
 const withdrawBtn = document.getElementById("withdraw-button");
+const resultWithdraw = document.getElementById("balance")
+const withdrawn = document.getElementById("withdraw-total")
 
-const withdraw = () => {
+export const withdraw = () => {
+    let newBalance = balance;
+
     withdrawBtn.addEventListener("click", () => {
         let input = parseInt(withdrawInput.value);
-        let result = balance - input
+        let result = newBalance -= input;
         console.log(result);
-        if (document.getElementById("withdraw-amount").value.length == 0) {
+
+        if (withdrawInput.value.length === 0) {
             alert("Enter the amount you would like to withdraw!");
-            let balance = document.getElementById("balance").value;
-            document.getElementById("balance").innerHTML = balance - withdrawInput
+        } else {
+            resultWithdraw.innerHTML = (newBalance);
+            withdrawn.innerHTML = (input);
         }
     })
-}
-
-export default withdraw;
+};
