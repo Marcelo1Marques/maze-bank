@@ -12,5 +12,5 @@ withdraw();
 form();
 send();
 transfer();
-// balance();
+balance();
 
