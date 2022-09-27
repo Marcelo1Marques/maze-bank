@@ -10,11 +10,13 @@ export const deposit = () => {
     
     depositBtn.addEventListener("click", () => {
         let input = parseInt(depositInput.value);
+        let result = input + newBalance;
+        console.log(result);
 
         if (depositInput.value.length === 0) {
             alert("Enter the amount you would like to deposit!");
         } else {
-            resultDeposit.innerHTML =  (newBalance) + '€';
+            resultDeposit.innerHTML = (newBalance += input)
             deposited.innerHTML = (input);
             document.getElementById("deposit-amount").value = "";
         }

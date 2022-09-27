@@ -10,11 +10,13 @@ export const withdraw = () => {
 
     withdrawBtn.addEventListener("click", () => {
         let input = parseInt(withdrawInput.value);
+        let result = input + newBalance;
+        console.log(result);
 
         if (withdrawInput.value.length === 0) {
             alert("Enter the amount you would like to withdraw!");
         } else {
-            resultWithdraw.innerHTML = (newBalance);
+            resultWithdraw.innerHTML = (newBalance += input * -1);
             withdrawn.innerHTML = (input);
             document.getElementById("withdraw-amount").value = "";
         }
