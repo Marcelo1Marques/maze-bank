@@ -1,14 +1,20 @@
 const sendBtn = document.getElementById("send-btn");
+const nameInput = document.getElementById("name");
+const numberInput = document.getElementById("number");
+const emailInput = document.getElementById("email");
 
 const send = () => {
     sendBtn.addEventListener("click", () => {
-        const send = document.getElementById("form-results");
-        if (document.querySelector(form) == "hidden") {
-            send.classList.toggle("hidden")
-        }else {
-            ""
-        }
-    });
-}
+        nameInput.value.length === 0 
+    })
+};
+
+function showError(nameInput, message) {
+    return showMessage(nameInput, "Please enter your name", false);
+};
+
+function showSuccess(nameInput) {
+    return showMessage(nameInput, "", true);
+};
 
 export default send

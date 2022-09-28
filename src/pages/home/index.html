@@ -16,21 +16,25 @@
     </div>
     <form action="" id="form" class="flex flex-col items-center pt-10 pb-10 gap-1 hidden">
       <label>
-        <span title="Full Name">Name</span> 
+        <span title="Full Name">Name</span>
+        <span id="error-name" class="text-red"></span>
       </label>
-      <input type="text" class="w-52 md:w-72 lg:w-96">
+      <input id="name" type="text" class="w-52 md:w-72 lg:w-96">
       <label>
         <span>Phone Number</span>
+        <span id="error-number" class="text-red"></span>
       </label>
-      <input type="number" class="w-52 md:w-72 lg:w-96">
+      <input id="number" type="number" class="w-52 md:w-72 lg:w-96">
       <label>
         <span>Email</span>
+        <span id="error-email" class="text-red"></span>
       </label>
-      <input type="email" class="w-52 md:w-72 lg:w-96">
+      <input id="email" type="email" class="w-52 md:w-72 lg:w-96">
       <label>
         <span>Balance</span>
+        <span id="error-balance" class="text-red"></span>
       </label>
-      <input type="number" class="w-52 md:w-72 lg:w-96">
+      <input id="balance-curr" type="number" class="w-52 md:w-72 lg:w-96">
       <button class="bg-gray w-24 md:w-32 text-white rounded-full" id="send-btn">Send</button>
       <div>
         <div class="flex flex-col items-center pt-10"> 
@@ -109,8 +113,8 @@
           <div class="bg-blue flex flex-col items-center border-none border-2 rounded-lg w-40 md:w-60">
             <h2><b>Beneficiary</b></h2>
                 <h2><span id="name-sent"></span></h2>
-            </div>
           </div>
+        </div>
           <div class="flex justify-center pt-6">
             <div class="bg-blue flex flex-col items-center border-none border-2 rounded-lg w-40 md:w-60">
               <h2><b>Amount sent</b></h2>
