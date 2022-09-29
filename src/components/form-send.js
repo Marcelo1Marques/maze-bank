@@ -5,16 +5,12 @@ const emailInput = document.getElementById("email");
 
 const send = () => {
     sendBtn.addEventListener("click", () => {
-        nameInput.value.length === 0 
+        if (nameInput.value.length===0||numberInput.value.length===0||emailInput===0) {
+            
+        }
     })
 };
 
-function showError(nameInput, message) {
-    return showMessage(nameInput, "Please enter your name", false);
-};
 
-function showSuccess(nameInput) {
-    return showMessage(nameInput, "", true);
-};
 
 export default send
