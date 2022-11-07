@@ -11,8 +11,8 @@ const error = document.getElementById("error");
 
 const send = () => {
     sendBtn.addEventListener("click", () => {
-        if (!nameInput.value|| !numberInput.value || !emailInput.value || !balanceCurr.value) {
-            error.textContent = "Please fill all fields"
+        if (!nameInput.value || !numberInput.value || !emailInput.value || !balanceCurr.value) {
+            error.textContent = "Please fill all required fields"
             error.style.color = "red"
         } else {
             formName.textContent = nameInput.value

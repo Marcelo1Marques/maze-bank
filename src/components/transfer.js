@@ -1,10 +1,20 @@
-const transferBtn = document.getElementById("transfer-btn");
+const nameBeneficiary = document.getElementById("name-sent");
+const beneficiary = document.getElementById("transfer-name")
+const amountSent = document.getElementById("money-sent");
+const amount = document.getElementById("transfer-amount")
+const transferBtn = document.getElementById("transfer-button");
+const error = document.getElementById("error-transfer");
 
 const transfer = () => {
     transferBtn.addEventListener("click", () => {
-        const form = document.getElementById("transfer");
-        form.classList.toggle("hidden")
-    });
-}
+        if (!beneficiary.value || !amount.value) {
+            error.textContent = "Please fill all required fields"
+            error.style.color = "red"
+        } else {
+            nameBeneficiary.textContent = beneficiary.value
+            amountSent.textContent = amount.value + "€"
+        }
+    })
+};
 
 export default transfer

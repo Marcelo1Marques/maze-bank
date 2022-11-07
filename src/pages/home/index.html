@@ -5,65 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="../../assets/css/output.css" rel="stylesheet"/>
+    <link rel="icon" type="image/x-icon" href="../../assets/img/logo.png">
     <title>Maze Bank</title>
   </head>
-  <body class="overflow-x-hidden max-h-fit bg-pink md:text-xl lg:text-3xl mt-6">
-    <header class="h-auto w-screen pt-3">
+  <body class="overflow-x-hidden max-h-fit bg-pink md:text-xl lg:text-3xl">
+    <header class="bg-blue w-screen pt-8">
       <h1 class="flex justify-center pb-10 text-lg"><b>Welcome to the Bank App!</b></h1>
     </header>
     <div class="flex justify-center">
-      <button type="btn" id="form-btn" class="bg-gray w-24 md:w-32 lg:w-48 text-white rounded-full">Fill our Form</button>
+      <button type="btn" id="form-btn" class="bg-gray mt-16 w-24 md:w-32 lg:w-48 text-white rounded-full">Fill our Form</button>
     </div>
-    <form action="" id="form" class="flex flex-col items-center pt-10 pb-10 gap-1 hidden">
+    <form action="" id="form" class="flex flex-col items-center pt-10 pb-10 gap-6 hidden">
       <label class="flex flex-col items-center">
         <span title="Full Name">Name</span>
-        <span id="error"></span>
       </label>
       <input id="name" type="text" class="w-52 md:w-72 lg:w-96">
       <label>
         <span>Phone Number</span>
-        <span id="error"></span>
       </label>
       <input id="number" type="number" class="w-52 md:w-72 lg:w-96">
       <label>
         <span>Email</span>
-        <span id="error"></span>
       </label>
       <input id="email" type="email" class="w-52 md:w-72 lg:w-96">
       <label>
         <span>Balance</span>
-        <span id="error"></span>
       </label>
       <input id="balance-curr" type="number" class="w-52 md:w-72 lg:w-96">
+      <span id="error"></span>
       <button type="button" class="bg-gray w-24 md:w-32 text-white rounded-full" id="send-btn">Send</button>
-      <div class="flex flex-col items-center">
+      <div class="flex flex-col items-center gap-6">
         <div class="flex flex-col items-center pt-10"> 
-          <div class="bg-blue flex flex-col items-center border-none border-2 rounded-lg w-fit">
+          <div class="bg-blue flex flex-col items-center border-none border-2 rounded-lg w-40 md:w-60">
             <h2><b>Name</b></h2>
                 <h2><span class="flex flex-col" id="form-name"></span></h2>
             </div>
           </div>
           <div class="flex items-center pt-6">
-              <div class="bg-blue flex flex-col items-center border-none border-2 rounded-lg w-fit">
+              <div class="bg-blue flex flex-col items-center border-none border-2 rounded-lg w-40 md:w-60">
                 <h2><b>Phone number</b></h2>
                   <h2><span class="flex flex-col" id="form-number"></span></h2>
               </div>
           </div>
           <div class="flex items-center pt-6">
-            <div class="bg-blue flex flex-col items-center border-none border-2 rounded-lg w-fit">
+            <div class="bg-blue flex flex-col items-center border-none border-2 rounded-lg w-40 md:w-60">
               <h2><b>Email</b></h2>
                 <h2><span class="flex flex-col" id="form-email"></span></h2>
             </div>
           </div>
           <div class="flex items-center pt-6">
-            <div class="bg-blue flex flex-col items-center border-none border-2 rounded-lg w-fit">
+            <div class="bg-blue flex flex-col items-center border-none border-2 rounded-lg w-40 md:w-60">
               <h2><b>Current balance</b></h2>
                 <h2><span class="flex flex-col" id="form-balance"></span></h2>
             </div>
           </div>
       </div>
     </form>
-  <div class="flex flex-col items-center pt-64"> 
+  <div class="flex flex-col items-center pt-28"> 
+    <h1 class="pb-8"><b>Account Movement Area</b></h1>
     <div class="bg-green flex flex-col items-center border-none border-2 rounded-lg w-40 md:w-60">
       <h2><b>Deposit</b></h2>
           <h2><span id="deposit-total">0</span>€</h2>
@@ -85,21 +84,21 @@
       <div class="flex flex-col items-center gap-2">
         <h4>Deposit Amount:</h4>
           <input id="deposit-amount" type="number" min="1" class="w-52 text-center md:w-72 lg:w-96" placeholder="Enter deposit amount">
-          <button type="button" id="deposit-button" class="bg-gray w-24 md:w-32 lg:w-48 text-white rounded-full">Deposit</button>
+          <button type="button" id="deposit-button" class="bg-gray w-24 md:w-32 lg:w-48 mt-6 text-white rounded-full">Deposit</button>
       </div>
       <div class="flex flex-col items-center gap-2 pt-10 pb-28">
         <h4>Withdraw Amount:</h4>
           <input id="withdraw-amount" type="number" min="1" class="w-52 text-center md:w-72 lg:w-96" placeholder="Enter withdraw amount">
-          <button type="button" id="withdraw-button" class="bg-gray w-24 md:w-32 lg:w-48 text-white rounded-full">Withdraw</button>
+          <button type="button" id="withdraw-button" class="bg-gray w-24 md:w-32 lg:w-48 mt-6 text-white rounded-full">Withdraw</button>
       </div>
     </div>
     <div class="flex flex-col items-center gap-1 min-h-screen pt-20 gap-2">
-      <button type="btn" id="transfer-btn" class="bg-gray w-24 md:w-32 lg:w-48 text-white rounded-full">Transfers</button>
-      <form action="" id="transfer" class="flex flex-col items-center pt-10 pb-10 gap-1 hidden">
+      <h1 class="pb-8"><b>Transfers Area</b></h1>
+      <form action="" id="transfer" class="flex flex-col items-center pt-10 pb-10 gap-6">
         <label>
           <span title="Full Name">Beneficiary Name</span> 
         </label>
-        <input type="text" class="w-52 md:w-72 lg:w-96">
+        <input id="transfer-name" type="text" class="w-52 md:w-72 lg:w-96">
         <label>
           <span>RIB</span>
         </label>
@@ -107,39 +106,40 @@
         <label>
           <span>Amount</span>
         </label>
-        <input type="amount" class="w-52 md:w-72 lg:w-96">
-        <button class="bg-gray w-24 md:w-32 text-white rounded-full">Send</button>
+        <input id="transfer-amount" type="number" class="w-52 md:w-72 lg:w-96">
+        <button id="transfer-button" type="button" class="bg-gray w-24 md:w-32 mt-6 text-white rounded-full">Send</button>
+        <span id="error-transfer"></span> 
         <div class="flex flex-col items-center pt-10"> 
           <div class="bg-blue flex flex-col items-center border-none border-2 rounded-lg w-40 md:w-60">
             <h2><b>Beneficiary</b></h2>
                 <h2><span id="name-sent"></span></h2>
           </div>
         </div>
-          <div class="flex justify-center pt-6">
+          <div class="flex justify-center pt-6 p-20">
             <div class="bg-blue flex flex-col items-center border-none border-2 rounded-lg w-40 md:w-60">
               <h2><b>Amount sent</b></h2>
                 <h2><span id="money-sent"></span></h2>
             </div>
           </div>
     </div>
-    <!-- <img src="../../assets/img/thank-you.jpg" alt=""> -->
-    <footer class=" bg-blue w-screen h-20 text-pink inset-x-0 bottom-0">
+    <footer class="bg-blue w-screen h-32 text-black inset-x-0 bottom-0">
       <div class="flex flex-col justify-center items-center h-full">
-        <span class="italic">Copyright</span>
+        <span class="italic"><b>Copyright 2022</b></span>
         <div>
+          <h1 class="pt-6 pb-2"><b>Social Links</b></h1>
           <span>
             <a href="https://github.com/Marcelo1Marques" target="_blank" rel="noreferrer noopener">
-              <i class="fa-brands fa-github text-pink"></i>
+              <i class="fa-brands fa-github text-black"></i>
             </a>
           </span>
           <span class="px-4">
             <a href="https://www.linkedin.com/in/marcelo-marques-57297a22a/" target="_blank" rel="noreferrer noopener">
-              <i class="fa-brands fa-linkedin text-pink"></i>
+              <i class="fa-brands fa-linkedin text-black"></i>
             </a>
           </span>
           <span >
             <a href="https://marcelom-portfolio.netlify.app/" target="_blank" rel="noreferrer noopener">
-              <i class="fa-solid fa-link text-pink"></i>
+              <i class="fa-solid fa-link text-black"></i>
             </a>
           </span>
         </div>
