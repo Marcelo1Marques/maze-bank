@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="../../assets/css/output.css" rel="stylesheet"/>
-    <link rel="icon" type="image/x-icon" href="../../assets/img/logo.png">
+    <link rel="icon" type="image/x-icon" href="./assets/img/logo.png">
     <title>Maze Bank</title>
   </head>
   <body class="overflow-x-hidden max-h-fit bg-pink md:text-xl lg:text-3xl">
@@ -36,25 +36,25 @@
       <button type="button" class="bg-gray w-24 md:w-32 text-white rounded-full" id="send-btn">Send</button>
       <div class="flex flex-col items-center gap-6">
         <div class="flex flex-col items-center pt-10"> 
-          <div class="bg-blue flex flex-col items-center border-none border-2 rounded-lg w-40 md:w-60">
+          <div class="bg-blue flex flex-col justify-center items-center border-none border-2 rounded-lg h-16 w-40 md:w-60">
             <h2><b>Name</b></h2>
                 <h2><span class="flex flex-col" id="form-name"></span></h2>
             </div>
           </div>
           <div class="flex items-center pt-6">
-              <div class="bg-blue flex flex-col items-center border-none border-2 rounded-lg w-40 md:w-60">
+              <div class="bg-blue flex flex-col justify-center items-center border-none border-2 rounded-lg h-16 w-40 md:w-60">
                 <h2><b>Phone number</b></h2>
                   <h2><span class="flex flex-col" id="form-number"></span></h2>
               </div>
           </div>
           <div class="flex items-center pt-6">
-            <div class="bg-blue flex flex-col items-center border-none border-2 rounded-lg w-40 md:w-60">
+            <div class="bg-blue flex flex-col justify-center items-center border-none border-2 rounded-lg h-16 w-40 md:w-60">
               <h2><b>Email</b></h2>
                 <h2><span class="flex flex-col" id="form-email"></span></h2>
             </div>
           </div>
           <div class="flex items-center pt-6">
-            <div class="bg-blue flex flex-col items-center border-none border-2 rounded-lg w-40 md:w-60">
+            <div class="bg-blue flex flex-col justify-center items-center border-none border-2 rounded-lg h-16 w-40 md:w-60">
               <h2><b>Current balance</b></h2>
                 <h2><span class="flex flex-col" id="form-balance"></span></h2>
             </div>
@@ -93,7 +93,7 @@
       </div>
     </div>
     <div class="flex flex-col items-center gap-1 min-h-screen pt-20 gap-2">
-      <h1 class="pb-8"><b>Transfers Area</b></h1>
+      <h1 class="pb-8"><b>Transfering Area</b></h1>
       <form action="" id="transfer" class="flex flex-col items-center pt-10 pb-10 gap-6">
         <label>
           <span title="Full Name">Beneficiary Name</span> 
@@ -102,28 +102,28 @@
         <label>
           <span>RIB</span>
         </label>
-        <input type="number" class="w-52 md:w-72 lg:w-96">
+        <input id="rib" type="number" min="1" class="w-52 md:w-72 lg:w-96">
         <label>
           <span>Amount</span>
         </label>
-        <input id="transfer-amount" type="number" class="w-52 md:w-72 lg:w-96">
+        <input id="transfer-amount" type="number" min="1" class="w-52 md:w-72 lg:w-96">
         <button id="transfer-button" type="button" class="bg-gray w-24 md:w-32 mt-6 text-white rounded-full">Send</button>
         <span id="error-transfer"></span> 
         <div class="flex flex-col items-center pt-10"> 
-          <div class="bg-blue flex flex-col items-center border-none border-2 rounded-lg w-40 md:w-60">
+          <div class="bg-blue flex flex-col justify-center items-center border-none border-2 rounded-lg h-16 w-40 md:w-60">
             <h2><b>Beneficiary</b></h2>
                 <h2><span id="name-sent"></span></h2>
           </div>
         </div>
           <div class="flex justify-center pt-6 p-20">
-            <div class="bg-blue flex flex-col items-center border-none border-2 rounded-lg w-40 md:w-60">
+            <div class="bg-blue flex flex-col justify-center items-center border-none border-2 rounded-lg h-16 w-40 md:w-60">
               <h2><b>Amount sent</b></h2>
                 <h2><span id="money-sent"></span></h2>
             </div>
           </div>
     </div>
-    <footer class="bg-blue w-screen h-32 text-black inset-x-0 bottom-0">
-      <div class="flex flex-col justify-center items-center h-full">
+    <footer class="bg-blue w-screen h-36 text-black inset-x-0 bottom-0">
+      <div class="flex flex-col justify-center items-center text-center h-full pb-2">
         <span class="italic"><b>Copyright 2022</b></span>
         <div>
           <h1 class="pt-6 pb-2"><b>Social Links</b></h1>
@@ -132,7 +132,7 @@
               <i class="fa-brands fa-github text-black"></i>
             </a>
           </span>
-          <span class="px-4">
+          <span class="px-16">
             <a href="https://www.linkedin.com/in/marcelo-marques-57297a22a/" target="_blank" rel="noreferrer noopener">
               <i class="fa-brands fa-linkedin text-black"></i>
             </a>
