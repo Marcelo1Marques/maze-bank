@@ -5,7 +5,7 @@ import { deposit } from "./components/deposit";
 import { withdraw } from "./components/withdraw";
 import form from "./components/form";
 import send from "./components/form-send";
-import transfer from "./components/transfer"
+import transfer from "./components/transfer";
 
 deposit();
 withdraw();

@@ -1,5 +1,5 @@
 const nameBeneficiary = document.getElementById("name-sent");
-const beneficiary = document.getElementById("transfer-name")
+const beneficiary = document.getElementById("transfer-name");
 const amountSent = document.getElementById("money-sent");
 const amount = document.getElementById("transfer-amount");
 const rib = document.getElementById("rib");
